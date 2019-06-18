@@ -8,19 +8,43 @@
 
 /* Begin PBXBuildFile section */
 		6F635845228222AA0051DAE1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F635844228222AA0051DAE1 /* AppDelegate.swift */; };
-		6F635847228222AA0051DAE1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F635846228222AA0051DAE1 /* ViewController.swift */; };
+		6F635847228222AA0051DAE1 /* PricingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F635846228222AA0051DAE1 /* PricingViewController.swift */; };
 		6F635849228222AC0051DAE1 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6F635848228222AC0051DAE1 /* Assets.xcassets */; };
 		6F63584C228222AC0051DAE1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6F63584A228222AC0051DAE1 /* Main.storyboard */; };
+		6F8BF47622B19C6500A64DD9 /* LoginService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BF47522B19C6500A64DD9 /* LoginService.swift */; };
+		6F8BF47822B1B0DA00A64DD9 /* PricingListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F8BF47722B1B0DA00A64DD9 /* PricingListViewController.swift */; };
+		6FB0658722AED7920040608F /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB0658522AED7920040608F /* LoginViewController.swift */; };
+		6FB83F24229DFCD50053F797 /* Stores.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FB83F21229DFCD50053F797 /* Stores.json */; };
+		6FB83F25229DFCD50053F797 /* Products.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FB83F22229DFCD50053F797 /* Products.json */; };
+		6FB83F26229DFCD50053F797 /* Persons.json in Resources */ = {isa = PBXBuildFile; fileRef = 6FB83F23229DFCD50053F797 /* Persons.json */; };
+		6FB83F29229DFD510053F797 /* JSONReader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FB83F28229DFD510053F797 /* JSONReader.swift */; };
+		6FD86468228A3FE7006BFC7A /* Product.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD86467228A3FE7006BFC7A /* Product.swift */; };
+		6FD8646A228A4098006BFC7A /* Store.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD86469228A4098006BFC7A /* Store.swift */; };
+		6FD8646C228A413A006BFC7A /* Person.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8646B228A413A006BFC7A /* Person.swift */; };
+		6FD8646E228A42F6006BFC7A /* Price.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8646D228A42F6006BFC7A /* Price.swift */; };
+		6FD86470228A49FA006BFC7A /* Pricing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FD8646F228A49FA006BFC7A /* Pricing.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		6F635841228222AA0051DAE1 /* Pricing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Pricing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6F635844228222AA0051DAE1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		6F635846228222AA0051DAE1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		6F635846228222AA0051DAE1 /* PricingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingViewController.swift; sourceTree = "<group>"; };
 		6F635848228222AC0051DAE1 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		6F63584B228222AC0051DAE1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6F63584D228222AC0051DAE1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		6F63584E228222AC0051DAE1 /* Pricing.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Pricing.entitlements; sourceTree = "<group>"; };
+		6F8BF47522B19C6500A64DD9 /* LoginService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginService.swift; sourceTree = "<group>"; };
+		6F8BF47722B1B0DA00A64DD9 /* PricingListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PricingListViewController.swift; sourceTree = "<group>"; };
+		6FB0658522AED7920040608F /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		6FB83F21229DFCD50053F797 /* Stores.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Stores.json; sourceTree = "<group>"; };
+		6FB83F22229DFCD50053F797 /* Products.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Products.json; sourceTree = "<group>"; };
+		6FB83F23229DFCD50053F797 /* Persons.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Persons.json; sourceTree = "<group>"; };
+		6FB83F28229DFD510053F797 /* JSONReader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONReader.swift; sourceTree = "<group>"; };
+		6FD86467228A3FE7006BFC7A /* Product.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Product.swift; sourceTree = "<group>"; };
+		6FD86469228A4098006BFC7A /* Store.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Store.swift; sourceTree = "<group>"; };
+		6FD8646B228A413A006BFC7A /* Person.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Person.swift; sourceTree = "<group>"; };
+		6FD8646D228A42F6006BFC7A /* Price.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Price.swift; sourceTree = "<group>"; };
+		6FD8646F228A49FA006BFC7A /* Pricing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pricing.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,14 +77,42 @@
 		6F635843228222AA0051DAE1 /* Pricing */ = {
 			isa = PBXGroup;
 			children = (
+				6FB83F27229DFD3D0053F797 /* JSONReader */,
+				6FB83F23229DFCD50053F797 /* Persons.json */,
+				6FB83F22229DFCD50053F797 /* Products.json */,
+				6FB83F21229DFCD50053F797 /* Stores.json */,
+				6FD86466228A3FD0006BFC7A /* Model */,
 				6F635844228222AA0051DAE1 /* AppDelegate.swift */,
-				6F635846228222AA0051DAE1 /* ViewController.swift */,
+				6F635846228222AA0051DAE1 /* PricingViewController.swift */,
 				6F635848228222AC0051DAE1 /* Assets.xcassets */,
 				6F63584A228222AC0051DAE1 /* Main.storyboard */,
 				6F63584D228222AC0051DAE1 /* Info.plist */,
 				6F63584E228222AC0051DAE1 /* Pricing.entitlements */,
+				6FB0658522AED7920040608F /* LoginViewController.swift */,
+				6F8BF47522B19C6500A64DD9 /* LoginService.swift */,
+				6F8BF47722B1B0DA00A64DD9 /* PricingListViewController.swift */,
 			);
 			path = Pricing;
+			sourceTree = "<group>";
+		};
+		6FB83F27229DFD3D0053F797 /* JSONReader */ = {
+			isa = PBXGroup;
+			children = (
+				6FB83F28229DFD510053F797 /* JSONReader.swift */,
+			);
+			path = JSONReader;
+			sourceTree = "<group>";
+		};
+		6FD86466228A3FD0006BFC7A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				6FD86467228A3FE7006BFC7A /* Product.swift */,
+				6FD86469228A4098006BFC7A /* Store.swift */,
+				6FD8646B228A413A006BFC7A /* Person.swift */,
+				6FD8646D228A42F6006BFC7A /* Price.swift */,
+				6FD8646F228A49FA006BFC7A /* Pricing.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -121,6 +173,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6FB83F24229DFCD50053F797 /* Stores.json in Resources */,
+				6FB83F26229DFCD50053F797 /* Persons.json in Resources */,
+				6FB83F25229DFCD50053F797 /* Products.json in Resources */,
 				6F635849228222AC0051DAE1 /* Assets.xcassets in Resources */,
 				6F63584C228222AC0051DAE1 /* Main.storyboard in Resources */,
 			);
@@ -133,8 +188,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6F635847228222AA0051DAE1 /* ViewController.swift in Sources */,
+				6FB0658722AED7920040608F /* LoginViewController.swift in Sources */,
+				6FB83F29229DFD510053F797 /* JSONReader.swift in Sources */,
+				6FD8646C228A413A006BFC7A /* Person.swift in Sources */,
+				6FD86470228A49FA006BFC7A /* Pricing.swift in Sources */,
+				6F8BF47822B1B0DA00A64DD9 /* PricingListViewController.swift in Sources */,
+				6F635847228222AA0051DAE1 /* PricingViewController.swift in Sources */,
 				6F635845228222AA0051DAE1 /* AppDelegate.swift in Sources */,
+				6FD86468228A3FE7006BFC7A /* Product.swift in Sources */,
+				6F8BF47622B19C6500A64DD9 /* LoginService.swift in Sources */,
+				6FD8646A228A4098006BFC7A /* Store.swift in Sources */,
+				6FD8646E228A42F6006BFC7A /* Price.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
