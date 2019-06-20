@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="XfG-lQ-9wD">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="14490.70"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -773,7 +773,7 @@
                         <outlet property="enterButton" destination="hnu-ah-CvH" id="sut-Qn-iEo"/>
                         <outlet property="personPopUp" destination="5ZT-4e-nda" id="q2n-wh-SsF"/>
                         <outlet property="positionControl" destination="ATN-yS-r0Q" id="Nez-jn-kTI"/>
-                        <segue destination="XfG-lQ-9wD" kind="sheet" identifier="loginToPricing" id="mjl-H0-M59"/>
+                        <segue destination="7pH-sz-1Xr" kind="sheet" identifier="loginToPricing" id="4yg-0Q-CDt"/>
                     </connections>
                 </viewController>
                 <customObject id="wTq-dU-YXJ" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
@@ -990,12 +990,44 @@
                                     <action selector="exitClicked:" target="XfG-lQ-9wD" id="BFa-2A-CqQ"/>
                                 </connections>
                             </button>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="1Vb-xx-mri">
+                                <rect key="frame" x="231" y="272" width="117" height="17"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="17" id="02I-zW-OXw"/>
+                                    <constraint firstAttribute="width" constant="113" id="9xm-JU-psh"/>
+                                </constraints>
+                                <textFieldCell key="cell" lineBreakMode="clipping" title="Assign to manager" id="KFq-ND-d77">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <popUpButton verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="qXS-Wl-iYI">
+                                <rect key="frame" x="231" y="240" width="179" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="MHo-IH-7ot"/>
+                                    <constraint firstAttribute="width" constant="174" id="iq2-s6-q7h"/>
+                                </constraints>
+                                <popUpButtonCell key="cell" type="push" title="Item 1" bezelStyle="rounded" alignment="left" lineBreakMode="truncatingTail" state="on" borderStyle="borderAndBezel" imageScaling="proportionallyDown" inset="2" selectedItem="Ote-zP-oSo" id="qj9-XZ-ZoA">
+                                    <behavior key="behavior" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="menu"/>
+                                    <menu key="menu" id="dtC-bm-aFo">
+                                        <items>
+                                            <menuItem title="Item 1" state="on" id="Ote-zP-oSo"/>
+                                            <menuItem title="Item 2" id="3aM-xR-V6u"/>
+                                            <menuItem title="Item 3" id="Zed-xa-gz8"/>
+                                        </items>
+                                    </menu>
+                                </popUpButtonCell>
+                            </popUpButton>
                         </subviews>
                         <constraints>
                             <constraint firstItem="x3t-xL-rFf" firstAttribute="centerX" secondItem="m2S-Jp-Qdl" secondAttribute="centerX" constant="-250.5" id="2Sz-Zg-HjG"/>
+                            <constraint firstItem="1Vb-xx-mri" firstAttribute="leading" secondItem="6mh-Te-Nea" secondAttribute="trailing" constant="108" id="43K-15-5uM"/>
                             <constraint firstItem="tdw-hK-LAX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="557-Ig-8BQ"/>
                             <constraint firstItem="6mh-Te-Nea" firstAttribute="top" secondItem="x3t-xL-rFf" secondAttribute="bottom" constant="18" id="Aoc-0U-1tc"/>
                             <constraint firstItem="Lgd-Cw-YRJ" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="32" id="At7-5r-sQ8"/>
+                            <constraint firstItem="qXS-Wl-iYI" firstAttribute="leading" secondItem="wK0-s0-JQT" secondAttribute="trailing" constant="39" id="Atp-Zp-vml"/>
                             <constraint firstItem="6ZB-Vv-Chz" firstAttribute="leading" secondItem="OAF-fW-Twx" secondAttribute="trailing" constant="25" id="CHO-Bd-vcl"/>
                             <constraint firstItem="tdw-hK-LAX" firstAttribute="top" secondItem="fFp-ms-irX" secondAttribute="bottom" constant="14" id="DFy-3K-vpB"/>
                             <constraint firstItem="wK0-s0-JQT" firstAttribute="top" secondItem="6mh-Te-Nea" secondAttribute="bottom" constant="8" id="DYP-cC-15t"/>
@@ -1003,7 +1035,9 @@
                             <constraint firstItem="OAF-fW-Twx" firstAttribute="leading" secondItem="Lgd-Cw-YRJ" secondAttribute="trailing" constant="1" id="Hgs-ci-Ppg"/>
                             <constraint firstItem="6ZB-Vv-Chz" firstAttribute="centerY" secondItem="OAF-fW-Twx" secondAttribute="centerY" id="JMg-TI-9w1"/>
                             <constraint firstItem="fFp-ms-irX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="LBX-8o-pOf"/>
+                            <constraint firstItem="1Vb-xx-mri" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="61" id="Nh4-2d-efU"/>
                             <constraint firstItem="tDo-wo-8xp" firstAttribute="top" secondItem="wK0-s0-JQT" secondAttribute="bottom" constant="32" id="O94-v7-xXq"/>
+                            <constraint firstItem="qXS-Wl-iYI" firstAttribute="top" secondItem="1Vb-xx-mri" secondAttribute="bottom" constant="8" id="P1c-zZ-iZ8"/>
                             <constraint firstItem="x3t-xL-rFf" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="QHw-uP-naR"/>
                             <constraint firstItem="NYs-yZ-ueI" firstAttribute="centerY" secondItem="6ZB-Vv-Chz" secondAttribute="centerY" id="SQ5-y4-Vna"/>
                             <constraint firstItem="Lgd-Cw-YRJ" firstAttribute="top" secondItem="tdw-hK-LAX" secondAttribute="bottom" constant="11" id="SX6-oR-AsN"/>
@@ -1029,6 +1063,7 @@
                         <outlet property="competitorRegionLabel" destination="WQf-Qb-b9B" id="0Ib-Tg-pAB"/>
                         <outlet property="dateEnd" destination="NYs-yZ-ueI" id="Bb3-di-QtW"/>
                         <outlet property="dateStart" destination="OAF-fW-Twx" id="tOR-lB-XcM"/>
+                        <outlet property="managerField" destination="qXS-Wl-iYI" id="s8J-xl-BQ5"/>
                         <outlet property="priceField" destination="fFp-ms-irX" id="7nU-16-aHp"/>
                         <outlet property="productPopUp" destination="Yfk-ep-gI7" id="Pd0-hn-f7e"/>
                         <outlet property="segmentsPriceType" destination="tDo-wo-8xp" id="AJC-9X-GY8"/>
@@ -1060,7 +1095,7 @@
                                             <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="gridColor" name="gridColor" catalog="System" colorSpace="catalog"/>
                                             <tableColumns>
-                                                <tableColumn width="116" minWidth="40" maxWidth="1000" id="EvA-MO-wrr">
+                                                <tableColumn width="309" minWidth="40" maxWidth="1000" id="EvA-MO-wrr">
                                                     <tableHeaderCell key="headerCell" lineBreakMode="truncatingTail" borderStyle="border">
                                                         <font key="font" metaFont="smallSystem"/>
                                                         <color key="textColor" name="headerTextColor" catalog="System" colorSpace="catalog"/>
@@ -1074,11 +1109,11 @@
                                                     <tableColumnResizingMask key="resizingMask" resizeWithTable="YES" userResizable="YES"/>
                                                     <prototypeCellViews>
                                                         <tableCellView id="nEs-Ma-Iwy">
-                                                            <rect key="frame" x="1" y="1" width="116" height="17"/>
+                                                            <rect key="frame" x="1" y="1" width="309" height="17"/>
                                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                             <subviews>
                                                                 <textField verticalHuggingPriority="750" horizontalCompressionResistancePriority="250" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5SG-Ye-9OT">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="116" height="17"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="309" height="17"/>
                                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
                                                                     <textFieldCell key="cell" lineBreakMode="truncatingTail" sendsActionOnEndEditing="YES" title="Table View Cell" id="Bah-Zn-JxX">
                                                                         <font key="font" metaFont="system"/>
@@ -1098,14 +1133,14 @@
                                     </subviews>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" horizontal="YES" id="i0N-wM-pyR">
-                                    <rect key="frame" x="2" y="332" width="310" height="16"/>
+                                    <rect key="frame" x="1" y="333" width="312" height="16"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                                 <scroller key="verticalScroller" hidden="YES" wantsLayer="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Sij-7i-uNv">
                                     <rect key="frame" x="224" y="17" width="15" height="102"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
-                                <tableHeaderView key="headerView" id="hJn-4y-xqa">
+                                <tableHeaderView key="headerView" hidden="YES" id="hJn-4y-xqa">
                                     <rect key="frame" x="0.0" y="0.0" width="312" height="25"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableHeaderView>
@@ -1180,6 +1215,17 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U6S-cT-HW1">
+                                <rect key="frame" x="264" y="13" width="35" height="32"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
+                                <buttonCell key="cell" type="push" title="+" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="DxU-TF-G4R">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="systemBold"/>
+                                </buttonCell>
+                                <connections>
+                                    <action selector="addButton:" target="7pH-sz-1Xr" id="Uy5-Ik-deW"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="QUi-9F-YCf" firstAttribute="top" secondItem="IDF-h4-7xN" secondAttribute="bottom" constant="8" id="6jN-rI-adx"/>
@@ -1203,6 +1249,7 @@
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="addButtonOutlet" destination="U6S-cT-HW1" id="Z0g-3P-L0y"/>
                         <outlet property="additionalInfoLabel" destination="QUi-9F-YCf" id="XVn-eX-Cz2"/>
                         <outlet property="editAcceptButton" destination="1t7-3e-bSQ" id="aMB-Ds-5fx"/>
                         <outlet property="price" destination="4F7-ag-K8L" id="jIv-Kb-r47"/>
@@ -1211,6 +1258,7 @@
                         <outlet property="rejectButton" destination="aog-WU-YD6" id="DGh-DZ-YDM"/>
                         <outlet property="tableView" destination="fo3-eE-K8o" id="7Mt-32-upo"/>
                         <outlet property="validityLabel" destination="Ud7-1X-L65" id="ISJ-XI-Mps"/>
+                        <segue destination="XfG-lQ-9wD" kind="sheet" identifier="newPricing" id="vtU-8q-JCW"/>
                     </connections>
                 </viewController>
                 <customObject id="c6N-0c-Who" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>

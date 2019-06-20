@@ -10,17 +10,23 @@ class PricingViewController: NSViewController {
     
     @IBOutlet weak var dateStart: NSDatePicker!
     @IBOutlet weak var dateEnd: NSDatePicker!
+    @IBOutlet weak var managerField: NSPopUpButton!
     
     var pricings: [Pricing]! = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        JSONReader.removeUserDefaults()
-        JSONReader.readMockData()
+        pricings.append(contentsOf: Pricing.pricings)
         populateProductPopUp()
         adjustDateWidgets()
         setSegmentPriceTypeMenu()
-        
+        fillManagers()
+        dateStart.action = #selector(didChangeDate)
+        dateStart.sendAction(on: NSEvent.EventTypeMask.mouseExited)
+    }
+    
+    @objc func didChangeDate() {
+        dateEnd.minDate = dateStart.dateValue
     }
     
     @IBAction func sendForApproval(_ sender: Any) {
@@ -33,18 +39,22 @@ class PricingViewController: NSViewController {
         
         let priceValue = priceField.doubleValue
         
+        let managerName = managerField.stringValue
+        let manager = Person.managers.first { $0.name == managerName }
+        
         switch priceType {
         case 0:
             let price = Price(id: Price.prices.count+1, product: product, value: priceValue, validityStart: validityStart, validityEnd: validityEnd)
             let pricing = Pricing(price: price)
-            pricing.bind(manager: Person.managers[0])
-            pricing.bind(employee: Person.employees[0])
+            pricing.bind(manager: manager!)
+            pricing.bind(employee: LoginService.shared.loggedUser!)
             pricings.append(pricing)
             JSONReader.savePricings(pricings)
-            
         default:
             return
         }
+        
+        dismiss(self)
     }
     
     @IBAction func switchPriceType(_ sender: AnyObject) {
@@ -89,6 +99,13 @@ class PricingViewController: NSViewController {
         competitorRegionField.isHidden = false
         competitorRegionField.addItems(withTitles: Region.allCases.map{ $0.description })
         competitorRegionField.selectItem(at: 0)
+    }
+    
+    func fillManagers() {
+        managerField.stringValue = "Select the manager"
+        managerField.removeAllItems()
+        managerField.addItems(withTitles: Person.managers.map { $0.name })
+        managerField.selectItem(at: 0)
     }
     
     func setSegmentPriceTypeMenu() {

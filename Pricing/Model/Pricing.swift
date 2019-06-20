@@ -58,6 +58,10 @@ class Pricing: Codable {
         self.status = .pending
     }
     
+    var product: Product? {
+        return price?.product
+    }
+    
     func bind(manager: Person) {
         self.manager = manager
         manager.assign(pricing: self)

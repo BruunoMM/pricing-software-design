@@ -18,6 +18,28 @@ class JSONReader {
         }
     }
     
+    private static func savePrices(_ prices: [Price]) {
+        let pricesURL = getDocumentsURL().appendingPathComponent("Prices.json")
+        let encoder = JSONEncoder()
+        do {
+            let data = try encoder.encode(prices)
+            try data.write(to: pricesURL, options: [])
+        } catch {
+            fatalError(error.localizedDescription)
+        }
+    }
+    
+    private static func readPrices() {
+        let url = getDocumentsURL().appendingPathComponent("Prices.json")
+        do {
+            let data = try Data(contentsOf: url)
+            let decoder = JSONDecoder()
+            let _ = try decoder.decode([Price].self, from: data)
+        } catch {
+            print("error:\(error)")
+        }
+    }
+    
     static func savePricings(_ pricings: [Pricing]) {
         let url = getDocumentsURL().appendingPathComponent("Pricings.json")
         savePrices(pricings.map { pricing in pricing.price! })
@@ -30,18 +52,9 @@ class JSONReader {
         }
     }
     
-    private static func savePrices(_ prices: [Price]) {
-        let pricesURL = getDocumentsURL().appendingPathComponent("Prices.json")
-        let encoder = JSONEncoder()
-        do {
-            let data = try encoder.encode(prices)
-            try data.write(to: pricesURL, options: [])
-        } catch {
-            fatalError(error.localizedDescription)
-        }
-    }
     
     private static func readPricings() {
+        readPrices()
         let url = getDocumentsURL().appendingPathComponent("Pricings.json")
         do {
             let data = try Data(contentsOf: url)

@@ -1,7 +1,7 @@
 import Foundation
 
 class Price: Codable {
-    class var name: String {
+    var name: String {
         return "Regular Price"
     }
     
@@ -64,7 +64,7 @@ class Price: Codable {
 }
 
 class RegionalPrice: Price {
-    override class var name: String {
+    override var name: String {
         return "Regional Price"
     }
     
@@ -81,7 +81,7 @@ class RegionalPrice: Price {
 }
 
 class PromotionalPrice: Price {
-    override class var name: String {
+    override var name: String {
         return "Promotional Price"
     }
     
@@ -98,7 +98,7 @@ class PromotionalPrice: Price {
 }
 
 class CompetitorPrice: Price {
-    override class var name: String {
+    override var name: String {
         return "Competitor Price"
     }
     
